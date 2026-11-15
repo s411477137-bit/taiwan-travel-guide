@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="台灣旅遊靈感圖鑑，收藏台灣各地值得探索的景點。">
+  <title>台灣旅遊靈感圖鑑｜Taiwan Travel Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="回到首頁">
+      <span class="brand-mark">旅</span>
+      <span>台灣旅遊靈感圖鑑<small>TAIWAN TRAVEL GUIDE</small></span>
+    </a>
+    <nav aria-label="主要導覽">
+      <a href="#home">首頁</a>
+      <a href="#collection">景點圖鑑</a>
+      <a href="#about">關於本站</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">YOUR NEXT JOURNEY STARTS HERE</p>
+        <h1>慢慢走，<br><span>發現台灣的美。</span></h1>
+        <p class="hero-description">從山海風景到城市巷弄，收藏每一個值得出發的地方，找尋下一趟旅行的靈感。</p>
+        <a class="primary-button" href="#collection">探索景點 <span>↗</span></a>
+      </div>
+      <div class="hero-art" role="img" aria-label="台灣山海旅行風景">
+        <div class="sun"></div><div class="mountain mountain-back"></div><div class="mountain mountain-front"></div>
+        <div class="sea"></div><div class="hero-note">TAIWAN<br>ISLAND LIFE</div>
+      </div>
+    </section>
+
+    <section class="intro section-wrap">
+      <p class="eyebrow">A LITTLE TRAVEL INSPIRATION</p>
+      <h2>下一站，想去哪裡？</h2>
+      <p>不需要很遠，也能遇見美好風景。挑選一個地區，開始你的台灣小旅行。</p>
+    </section>
+
+    <section class="collection section-wrap" id="collection">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE COLLECTION</p><h2>景點靈感清單</h2></div>
+        <span class="result-count" id="resultCount">共 8 個景點</span>
+      </div>
+
+      <div class="tools">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="搜尋景點或城市..." aria-label="搜尋景點或城市">
+        </label>
+        <div class="filters" aria-label="地區篩選">
+          <button class="filter-button active" data-region="全部">全部</button>
+          <button class="filter-button" data-region="北部">北部</button>
+          <button class="filter-button" data-region="中部">中部</button>
+          <button class="filter-button" data-region="南部">南部</button>
+          <button class="filter-button" data-region="東部">東部</button>
+        </div>
+      </div>
+
+      <div class="place-grid" id="placeGrid"></div>
+      <p class="empty-message" id="emptyMessage" hidden>找不到符合條件的景點，試試其他關鍵字吧！</p>
+    </section>
+
+    <section class="quote-banner">
+      <p>“ Collect moments, not things. ”</p>
+      <span>把日常留給生活，把風景留給自己。</span>
+    </section>
+
+    <section class="about section-wrap" id="about">
+      <div><p class="eyebrow">ABOUT THIS PROJECT</p><h2>關於旅遊靈感圖鑑</h2></div>
+      <p>這是一個以台灣旅遊為主題的個人小專案，透過簡單的景點分類與搜尋，整理旅行資訊。未來也會持續加入更多城市、景點與旅遊主題。</p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand footer-brand" href="#home"><span class="brand-mark">旅</span><span>台灣旅遊靈感圖鑑<small>TAIWAN TRAVEL GUIDE</small></span></a>
+    <p>Made with love for Taiwan · 個人學習專案</p>
+  </footer>
+
+  <dialog id="placeDialog" class="place-dialog">
+    <button class="dialog-close" id="dialogClose" aria-label="關閉">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+
+  <script src="data/places.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
